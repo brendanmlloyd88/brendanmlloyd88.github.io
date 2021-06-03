@@ -3,6 +3,8 @@ var random;
 var selection;
 var string = "";
 var colour = "";
+var message = '';
+var viewedQuotes =[];
 // quotes must not be duplicated until they have all been used
 // so first, initialize array of used random numbers
 var usedRandomNumbers = [];
