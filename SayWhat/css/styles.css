@@ -36,7 +36,7 @@ body {
   position: absolute;
 }
 .source {
-  font-size: 0.4rem;;
+  font-size: 0.8125rem;;
   letter-spacing: 0.05em;
   line-height: 0.3;
   text-align: left;
@@ -78,7 +78,7 @@ body {
 #loadQuote:focus {
   outline: none;
 }
-
+*/
 @media (max-width: 420px) {
   .quote {
     font-size: 2.5rem;
@@ -90,4 +90,4 @@ body {
     font-size: 1rem;
   }
 }
-*/
+
