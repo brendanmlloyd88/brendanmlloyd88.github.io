@@ -85,6 +85,6 @@ function printQuote() {
 
 // event listener to respond to clicks on the page
 // when user clicks anywhere on the page, the "printQuote" function is called
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+document.getElementById('loadQuote').addEventListener("click", printQuote, true);
 //call printQuote every 30 seconds
 window.setInterval(printQuote, 30000);
