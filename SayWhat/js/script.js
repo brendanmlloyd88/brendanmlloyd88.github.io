@@ -70,11 +70,6 @@ function printQuote() {
 	} else {
 		message += '';
 	}
-	if ( quotes.tags ) {
-		message += '<h3>' + quotes.tags + '</h3>';
-	} else {
-		message += '';
-	}
 	print(message);
 }
 
