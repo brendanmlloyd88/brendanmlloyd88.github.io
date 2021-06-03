@@ -59,7 +59,7 @@ function getRandomQuote() {
 // this function adds the selected quote to the page and calls colourChange
 function printQuote() {
   // call colourChange
-  // colourChange();
+  /colourChange();
   // call getRandomQuote, store the returned quote object in a variable
   selection = getRandomQuote();
   // construct a string using the different properties of the quote object
@@ -84,6 +84,6 @@ function printQuote() {
 
 // event listener to respond to clicks on the page
 // when user clicks anywhere on the page, the "printQuote" function is called
-document.getElementById('loadQuote').addEventListener("click", printQuote, true);
+//document.getElementById('loadQuote').addEventListener("click", printQuote, true);
 //call printQuote every 30 seconds
 window.setInterval(printQuote, 30000);
