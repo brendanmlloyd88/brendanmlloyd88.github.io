@@ -6,10 +6,10 @@ body {
 }
 #quote-box {
   position: absolute;
-  top: 5%;
-  left: 10%;
-  right: 10%;
-  width: 80%;
+  top: 1%;
+  left: 1%;
+  right: 1%;
+  width: 98%;
   line-height: .5;
 }
 .quote {
