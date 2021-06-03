@@ -12,14 +12,14 @@ var counter = 0;
 
 
 // this function will increase counter and reset once all quotes have been used
-//function trackUsed() {
-//  counter += 1;
+function trackUsed() {
+  counter += 1;
   // if all quotes have been used once, reset array of used numbers
-//  if (counter === quotes.length) {
-//     usedRandomNumbers.length = 0;
-//     counter = 0;
-//  }
-//}
+  if (counter === quotes.length) {
+     usedRandomNumbers.length = 0;
+     counter = 0;
+  }
+}
 
 // this code will randomly change the background colour
 // first, this function creates random values
