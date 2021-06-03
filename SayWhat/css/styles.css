@@ -36,9 +36,9 @@ body {
   position: absolute;
 }
 .source {
-  font-size: 0.875rem;;
+  font-size: 0.675rem;;
   letter-spacing: 0.05em;
-  line-height: 0.6;
+  line-height: 0.3;
   text-align: left;
   margin-right: 4em;
 }
