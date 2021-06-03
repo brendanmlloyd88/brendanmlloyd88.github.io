@@ -1,7 +1,7 @@
 body {
-  /*text-align: center;*/
-  background-color: rgba(255,255,255,0);
-  color: white;
+  text-align: center
+  background-color: rgba(0,0,0,0);
+  color: red;
   font-family: 'Playfair Display', serif;
 }
 #quote-box {
