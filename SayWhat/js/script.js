@@ -72,11 +72,7 @@ function printQuote() {
       }
       if (selection.year !== "") {
       string += '<span class="year">' + selection.year + '</span>';
-      }
-      if (selection.tags !== "") {
-      string += '<span class="tags">' + selection.tags + '</span>';
-      }
-  string += '</p>';
+    string += '</p>';
 
   // display final HTML string to the page
   document.getElementById('quote-box').innerHTML = string;
