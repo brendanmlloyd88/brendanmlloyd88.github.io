@@ -25,11 +25,10 @@ function trackUsed() {
 // first, this function creates random values
 // function rgbRandom() {
 //  return Math.floor(Math.random() * 256);
-//}
 // next, create string and add to html
-// function colourChange() {
-//  colour = 'rgb(' + rgbRandom() + ',' + rgbRandom() + ',' + rgbRandom() + ')';
-//  document.getElementById("colour").style.backgroundColor = colour;
+ function colourChange() {
+  colour = 'rgba(255,255,255,100)';
+  document.getElementById("colour").style.backgroundColor = colour;
 }
 
 
