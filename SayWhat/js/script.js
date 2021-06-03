@@ -7,19 +7,19 @@ var colour = "";
 // so first, initialize array of used random numbers
 var usedRandomNumbers = [];
 // next, initialize counter that will track when all quotes have been used
-var counter = 0;
+// var counter = 0;
 
 
 
 // this function will increase counter and reset once all quotes have been used
-function trackUsed() {
-  counter += 1;
+//function trackUsed() {
+//  counter += 1;
   // if all quotes have been used once, reset array of used numbers
-  if (counter === quotes.length) {
-     usedRandomNumbers.length = 0;
-     counter = 0;
-  }
-}
+//  if (counter === quotes.length) {
+//     usedRandomNumbers.length = 0;
+//     counter = 0;
+//  }
+//}
 
 // this code will randomly change the background colour
 // first, this function creates random values
@@ -35,47 +35,45 @@ function trackUsed() {
 /* this function will select a random quote object from array,
   then test to see whether quote has been used,
   then return quote object */
+function print(quote) {
+	var outputDiv = document.getElementById('quote-box');
+	outputDiv.innerHTML = quote;
+}
+// Function to get a random object from quotes array and store in variable randomQuote
 function getRandomQuote() {
-
-  // generate random number between 0 and total number of values in array
-    random = Math.floor(Math.random() * quotes.length);
-      // if number has not been used already, add it to used numbers and return random quote
-      if (usedRandomNumbers.indexOf(random) === -1) {
-          usedRandomNumbers.push(random);
-          trackUsed();
-          return quotes[random];
-      // if it has been used, generate random numbers until you get a new one
-      } else {
-          while (usedRandomNumbers.indexOf(random) > -1) {
-            random = Math.floor(Math.random() * quotes.length);
-          }
-          // then add it to used numbers and return random quote
-          usedRandomNumbers.push(random);
-          trackUsed();
-          return quotes[random];
-      }
+	var randomQuote = Math.floor(Math.random() * quotes.length);
+	
+	var splicedQuote = quotes.splice(randomQuote, 1)[0];
+	viewedQuotes.push(splicedQuote);
+	if ( quotes.length === 0 ) {
+		quotes = viewedQuotes;
+		viewedQuotes = [];
+	}
+	return splicedQuote;
 }
 
 // this function adds the selected quote to the page and calls colourChange
 function printQuote() {
-  // call colourChange
-  /colourChange();
-  // call getRandomQuote, store the returned quote object in a variable
-  selection = getRandomQuote();
-  // construct a string using the different properties of the quote object
-  string = "";
-  string += '<p class="quote">' + selection.quote + '</p>';
-  string += '<p class="source">' + selection.source;
-      /* printQuote doesn't add a <span class="citation"> for a missing citation or a <span class="year"> if the year property is missing */
-      if (selection.citation !== "") {
-      string += '<span class="citation">' + selection.citation + '</span>';
-      }
-      if (selection.year !== "") {
-      string += '<span class="year">' + selection.year + '</span>';
-    string += '</p>';
-
-  // display final HTML string to the page
-  document.getElementById('quote-box').innerHTML = string;
+	// On click event, function printQuote runs, then fires the getRandomQuote function
+	var quotes = getRandomQuote();
+	message ='<p class="quote">' + quotes.quote + '</p>';
+	message  += '<p class="source">' + quotes.source;
+	if ( quotes.citation ) {
+		message += '<span class="citation">' + quotes.citation + '</span>';
+	} else {
+		message += '';
+	}
+	if (quotes.year) {
+		message += '<span class="year">' + quotes.year + '</span></p>';	
+	} else {
+		message += '';
+	}
+	if ( quotes.tags ) {
+		message += '<h3>' + quotes.tags + '</h3>';
+	} else {
+		message += '';
+	}
+	print(message);
 }
 
 // event listener to respond to clicks on the page
